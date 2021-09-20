@@ -1,0 +1,30 @@
+<!doctype HTML>
+<html>
+
+<head>
+<h1>List of products</h1>
+
+    <a href="{% url 'addproduct' %}"> ADD PRODUCT </a>
+
+</head>
+<hr>
+<body>
+
+        <table>
+            <tr>
+                    <th>Product</th>
+                    <th>Sub Category</th>
+                    <th>Category</th>
+            </tr>
+            {%  for pro in products  %}
+                <tr>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.subcategory}}</td>
+                    <td>{{pro.category}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+</body>
+
+
+</html>

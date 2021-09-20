@@ -1,0 +1,11 @@
+
+<h1>Product Form</h1>
+<a href="{% url 'products' %}"> BACK </a>
+<form method="POST">
+    {% csrf_token %}
+    Product : {{form.name}}
+    Sub Category : {{form.subcategory}}
+    Category : {{form.category}}
+    <input type = "submit">
+
+</form>
